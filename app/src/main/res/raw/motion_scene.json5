@@ -1,0 +1,145 @@
+{
+  ConstraintSets: {
+    end: {
+      my_image: {
+        width: 45,
+        height: 45,
+        top: [
+          'parent',
+          'top',
+          8
+        ],
+        start: [
+          'arrow_back',
+          'end',
+          8
+        ]
+      },
+      arrow_back: {
+        width: 35,
+        height: 35,
+        top: [
+          'parent',
+          'top',
+          12
+        ],
+        start: [
+          'parent',
+          'start',
+          8
+        ]
+      },
+      title_txt: {
+        start: ['my_image', 'end', 8],
+        top: ['parent', 'top'],
+        bottom: ['my_image', 'bottom'],
+        custom: {
+          text_color : "#000000"
+        }
+      },
+      share_icon: {
+        width: 0,
+        height: 0,
+        end: [
+          'parent',
+          'end',
+          8
+        ],
+        top: [
+          'parent',
+          'top',
+          8
+        ]
+      },
+      content: {
+        width: 'spread',
+        end: ['parent', 'end', 0],
+        start: ['parent', 'start', 0],
+        top: ['arrow_back', 'bottom', 8],
+      }
+    },
+    start: {
+      my_image: {
+        width: 200,
+        height: 200,
+        top: [
+          'parent',
+          'top',
+          40
+        ],
+        end: [
+          'parent',
+          'end'
+        ],
+        start: [
+          'parent',
+          'start'
+        ]
+      },
+      arrow_back: {
+        width: 35,
+        height: 35,
+        top: [
+          'my_image',
+          'bottom',
+          8
+        ],
+        start: [
+          'parent',
+          'start',
+          8
+        ]
+      },
+      title_txt: {
+        start: ['arrow_back', 'end', 8],
+        top: ['arrow_back', 'top'],
+        bottom: ['arrow_back', 'bottom'],
+        custom: {
+          text_color : "#FF0000"
+        }
+      },
+      share_icon: {
+        width: 35,
+        height: 35,
+        end: [
+          'parent',
+          'end',
+          8
+        ],
+        top: [
+          'my_image',
+          'bottom',
+          8
+        ]
+      },
+      content: {
+        width: 'spread',
+        end: ['parent', 'end', 0],
+        start: ['parent', 'start', 0],
+        top: ['arrow_back', 'bottom', 8],
+      }
+    }
+  },
+  Transitions: {
+    default: {
+
+      from: 'start',
+      top: 'end',
+      pathMotionArc: 'startHorizontal',
+
+      KeyFrames: {
+
+        KeyAttributes: [
+
+          {
+            target: ['title_txt'],
+            frames: [0, 10, 30, 50, 100],
+            translationX: [0, 150, 250, 350, 0],
+            //rotationZ: [0, 72 , 144, 216, 0]
+          }
+
+        ]
+      }
+    }
+  }
+}
